@@ -1,0 +1,77 @@
+.container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(8, auto);
+  grid-gap: 1px;
+  width: 403px;
+  /* Adjust the width to fit the chessboard */
+  height: 403px;
+  /* Adjust the height to fit the chessboard */
+  background-color: black;
+}
+
+.grid-item {
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  position: relative;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  font-size: 10px;
+  line-height: 50px;
+}
+
+/* Checkerboard pattern for white and black grids */
+
+
+.grid-item.white {
+  background-color: white;
+  color: black;
+}
+
+.grid-item.black {
+  background-color: black;
+  color: white;
+}
+
+.grid-item:hover {
+  background-color: red;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  display: none;
+  font-size: 15px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  top: 0;
+  left: 420px;
+  /* Adjust this value to position the tooltip on the right side */
+}
+
+/* Onclick grid information styles */
+.onclick-info {
+  margin-left: 20px;
+  /* Adjust the margin to position the container on the right side */
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  /* Add styles to display onclick info in a new column if it exceeds the chessboard height */
+  max-height: 403px;
+  overflow-y: auto;
+  width: 100px;
+  /* Adjust the width to create a new column */
+}
